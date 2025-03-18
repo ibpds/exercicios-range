@@ -10,9 +10,11 @@
 <div id="container">
   <ion-title>Calcular Gorjeta</ion-title>
   <ion-item>
-    <ion-input placeholder="Digite o valor da conta" type="number"></ion-input>
+    <ion-input placeholder="Digite o valor da conta" type="number" [(ngModel)]="inputValor"></ion-input>
   </ion-item>
 <ion-range (ionChange)="{$event}" [ticks]="true" [snaps]="true" [min]="0" [max]="30"></ion-range>
 
+<ion-button expand="block" (click)="calcular()">Calcular Gorjeta</ion-button>
+<ion-label>{{res}}</ion-label>
 </div>
 </ion-content>
