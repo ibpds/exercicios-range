@@ -22,8 +22,10 @@ export class HomePage {
     this.valorConta = (Number(this.inputValor) + Number(this.resGorjeta)).toString();
   };
 
-  converterMoedas(){
-    
+  medida = '';
+  
+  converterMedidas(ev:RangeCustomEvent){
+    this.valorRange = (Number(ev.detail.value.toString()));
   }
 
 }

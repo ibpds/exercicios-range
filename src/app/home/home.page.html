@@ -16,5 +16,12 @@
 
 <ion-title size="small">Gorjeta: {{resGorjeta}}</ion-title>
 <ion-label>Valor Final: {{valorConta}}</ion-label>
+
+<ion-title>Converter medidas</ion-title>
+<ion-input type="number" placeholder="Digite um valor" [(ngModel)]="medida"></ion-input>
+<ion-radio-group>
+  <ion-radio>Metros</ion-radio>
+  <ion-radio>Quilometros</ion-radio>
+</ion-radio-group>
 </div>
 </ion-content>
