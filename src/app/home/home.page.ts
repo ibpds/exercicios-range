@@ -13,14 +13,17 @@ export class HomePage {
 
   valorRange = 0;
   inputValor = '';
-  res = '';
+  resGorjeta = '';
+  valorConta = '';
 
-  onIonRange(ev:RangeCustomEvent){
-    this.valorRange = parseInt(ev.detail.value.toString());
+   calcularGorjeta(ev:RangeCustomEvent){
+    this.valorRange = (Number(ev.detail.value.toString())/100);
+    this.resGorjeta = Math.round(Number(this.inputValor)*this.valorRange).toString();
+    this.valorConta = (Number(this.inputValor) + Number(this.resGorjeta)).toString();
   };
 
-  calcular(){
-    this.res = (this.valorRange*parseInt(this.inputValor)).toString();
+  converterMoedas(){
+    
   }
 
 }
